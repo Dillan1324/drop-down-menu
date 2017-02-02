@@ -5,7 +5,7 @@
 }
 
 ul {
-    text-align: left;
+    text-align: center;
     display: inline-table;
     padding: 154px 41px;
     color: white;
@@ -13,6 +13,7 @@ ul {
 
 ul li {
     font: bold 16px sans-serif;
+    width: 69px;
     display: inline-block;
     position: relative;
     padding: 15px 20px;
@@ -38,7 +39,9 @@ ul li ul li {
     color: darkblue;
 }
 
-ul li ul li:hover {}
+ul li ul li:hover {
+    text-decoration: none;
+}
 
 ul li:hover ul {
     display: block;

@@ -1,6 +1,7 @@
 .nav-body {
     background-image: url(../images/comics.jpg);
     background-repeat: no-repeat;
+
 }
 
 ul {
@@ -28,7 +29,7 @@ ul li ul {
     position: absolute;
     top: 48px;
     left: 0;
-    visibility: hidden;
+    display: none;
 }
 
 ul li ul li {

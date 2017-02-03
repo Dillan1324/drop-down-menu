@@ -24,10 +24,9 @@ ul {
 ul li {
     font: bold 15px;
     font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
-    width: 69px;
     display: inline-block;
     position: relative;
-    padding: 15px 20px;
+    padding: 11px 19px;
     cursor: pointer;
 }
 
@@ -39,7 +38,7 @@ ul li:hover {
 ul li ul {
     padding: 0;
     position: absolute;
-    top: 48px;
+    top: 40px;
     left: 0;
     display: none;
 }

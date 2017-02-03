@@ -1,11 +1,11 @@
 body{
-    background-color: darkred;
+      background-image: url(../images/comic.png);
+    background-repeat: no-repeat;
 }
 
 
 .nav-body {
-    background-image: url(../images/comics.jpg);
-    background-repeat: no-repeat;
+
     margin: 160px auto;
     width: 700px;
 

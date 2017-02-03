@@ -1,26 +1,32 @@
-body {
-    background-image: url(../images/comic.png);
-    background-repeat: no-repeat;
+body{
+    background-color: darkred;
 }
 
+
 .nav-body {
+    background-image: url(../images/comics.jpg);
+    background-repeat: no-repeat;
     margin: 160px auto;
-    width: 800px;
+    width: 700px;
+
+
+
 }
 
 ul {
     text-align: center;
     display: inline-table;
-    padding: 100px 0px 0px 120px;
+    padding: 154px 41px;
     color: white;
 }
 
 ul li {
     font: bold 16px sans-serif;
+    width: 69px;
     display: inline-block;
-    padding: 43px 13px 12px 0px;
-    cursor: pointer;
     position: relative;
+    padding: 15px 20px;
+    cursor: pointer;
 }
 
 ul li:hover {
@@ -31,10 +37,9 @@ ul li:hover {
 ul li ul {
     padding: 0;
     position: absolute;
-    top: 60px;
+    top: 48px;
     left: 0;
     display: none;
-    width: 100%;
 }
 
 ul li ul li {
@@ -49,4 +54,5 @@ ul li ul li:hover {
 
 ul li:hover ul {
     display: block;
+    visibility: visible;
 }

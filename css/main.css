@@ -31,8 +31,8 @@ ul li {
 }
 
 ul li:hover {
-    background: grey;
-    color: #fff;
+    background: blue;
+    color: red;
 }
 
 ul li ul {
@@ -44,9 +44,9 @@ ul li ul {
 }
 
 ul li ul li {
-    background: grey;
+    background: yellow;
     display: block;
-    color: darkblue;
+    color: #1D8348;
 }
 
 ul li ul li:hover {

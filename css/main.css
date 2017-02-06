@@ -1,56 +1,88 @@
-body{
-      background-image: url(../images/comic.png);
+body {
+    background-image: url(../images/comic.png);
     background-repeat: no-repeat;
 }
 
 
-.nav-body {
-margin-bottom: 50px;
+/* Giving a background-color to the nav container. */
 
-
+nav {
+    width: 780px;
+    margin: 0 auto;
 }
 
-ul {
-    text-align: center;
-    display: inline-table;
-    padding: 100px 0px;
-    color: white;
-    width: 100%
-}
-
-ul li {
-    font: bold 15px;
-    font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
-    display: inline-block;
-    position: relative;
-    padding: 11px 19px;
-    cursor: pointer;
-}
-
-ul li:hover {
-    background: blue;
-    color: white;
-}
-
-ul li ul {
+nav ul {
     padding: 0;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    display: none;
+    margin: 0;
+    list-style: none;
+    position: relative;
 }
 
-ul li ul li {
-    background: red;
+
+/* Positioning the navigation items inline */
+
+nav ul li {
+    float: left;
+    position: relative;
+    display: inline-block;
+    background-color: #E64A19;
+}
+
+
+/* Styling the links */
+
+nav a {
     display: block;
-    color: yellow;
-}
-
-ul li ul li:hover {
+    padding: 0 21px;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 50px;
     text-decoration: none;
 }
 
-ul li:hover ul {
-    display: block;
-    visibility: visible;
+nav a:hover {
+    background-color: green;
+
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+
+}
+
+nav ul li:hover > ul {
+    display: inherit;
+
+
+}
+
+nav ul ul li {
+    width: 153px;
+    display: list-item;
+    position: relative;
+    background-color: crimson;
+
+}
+
+
+nav ul ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border: solid 5px yellow
+      
+
+
+
+}
+ul  li > a:after{
+    content: ' \25BC';
+}
+
+ul ul li > a:after{
+    content: ' \25BA';}
+
+li > a:only-child:after { content: '';
 }

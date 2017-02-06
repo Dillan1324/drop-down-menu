@@ -40,9 +40,15 @@ nav a {
     text-decoration: none;
 }
 
+
+/*Shows the colour green when the cursor is pointed to the different navigation tabs*/
+
 nav a:hover {
     background-color: green;
 }
+
+
+/* Up Arrow */
 
 nav a:hover:after {
     content: '\25B2';
@@ -52,14 +58,24 @@ nav ul ul {
     display: none;
     position: absolute;
     top: 50px;
-
 }
 
 nav ul li:hover > ul {
     display: inherit;
+}
 
 
+/*Everything after content does not require arrows*/
 
+li > a:only-child:after {
+    content: '';
+}
+
+
+/* Down Arrow */
+
+ul li > a:after {
+    content: ' \25BC';
 }
 
 nav ul ul li {
@@ -67,30 +83,21 @@ nav ul ul li {
     display: list-item;
     position: relative;
     background-color: crimson;
-
 }
 
+
+/* Right Arrow */
+
+ul ul li > a:after {
+    content: ' \25BA';
+}
+
+
+/*Green Arrow navigation to submenus*/
 
 nav ul ul ul {
     position: absolute;
     top: 0;
     left: 100%;
     border: solid 5px yellow
-      
-
-
-
-}
-
-
-
-ul li > a:after{
-    content: ' \25BC';
-}
-
-ul ul li > a:after{
-    content: ' \25BA';
-}
-
-li > a:only-child:after { content: '';
 }

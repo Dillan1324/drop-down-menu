@@ -42,7 +42,10 @@ nav a {
 
 nav a:hover {
     background-color: green;
+}
 
+nav a:hover:after {
+    content: '\25B2';
 }
 
 nav ul ul {
@@ -54,6 +57,7 @@ nav ul ul {
 
 nav ul li:hover > ul {
     display: inherit;
+
 
 
 }
@@ -77,12 +81,16 @@ nav ul ul ul {
 
 
 }
-ul  li > a:after{
+
+
+
+ul li > a:after{
     content: ' \25BC';
 }
 
 ul ul li > a:after{
-    content: ' \25BA';}
+    content: ' \25BA';
+}
 
 li > a:only-child:after { content: '';
 }

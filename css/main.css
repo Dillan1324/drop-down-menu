@@ -1,6 +1,11 @@
 body {
     background-image: url(../images/comic.png);
     background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+html {
+    height: 100%
 }
 
 
@@ -17,9 +22,6 @@ nav ul {
     list-style: none;
     position: relative;
 }
-
-
-/* Positioning the navigation items inline */
 
 nav ul li {
     float: left;
@@ -41,17 +43,14 @@ nav a {
 }
 
 
-/*Shows the colour green when the cursor is pointed to the different navigation tabs*/
+/*Shows the colour  when the cursor is pointed to the different navigation tabs*/
 
-nav a:hover {
-    background-color: green;
+nav li {
+    transition: all ease 650ms;
 }
 
-
-/* Up Arrow */
-
-nav a:hover:after {
-    content: '\25B2';
+nav li:hover {
+    background-color: #D16D59;
 }
 
 nav ul ul {
@@ -62,34 +61,21 @@ nav ul ul {
 
 nav ul li:hover > ul {
     display: inherit;
+    width: 100%;
+}
+
+nav ul li ul li ul li {
+    background-color: #D63C1D;
 }
 
 
 /*Everything after content does not require arrows*/
 
-li > a:only-child:after {
-    content: '';
-}
-
-
-/* Down Arrow */
-
-ul li > a:after {
-    content: ' \25BC';
-}
-
 nav ul ul li {
-    width: 153px;
+    width: 100%;
     display: list-item;
     position: relative;
-    background-color: red;
-}
-
-
-/* Right Arrow */
-
-ul ul li > a:after {
-    content: ' \25BA';
+    background-color: #DD4318;
 }
 
 
@@ -99,5 +85,26 @@ nav ul ul ul {
     position: absolute;
     top: 0;
     left: 100%;
-    border: solid 5px yellow
+}
+
+.comic > a:after,
+.character > a:after {
+    content: "\25bc";
+    display: inline-block;
+    transition: 650ms ease all;
+}
+
+.comic:hover > a:after {
+    transform: rotate(180deg);
+    color: #070EF0;
+}
+
+.character > a:after {
+    display: inline-block;
+    transition: 650ms ease all;
+}
+
+.character:hover > a:after {
+    transform: rotate(360deg);
+    color: #FFFF00;
 }

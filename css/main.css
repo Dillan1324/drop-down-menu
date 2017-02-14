@@ -1,10 +1,9 @@
 body {
-      background-image: url(../images/comic.png);
+    background-image: url(../images/comic.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
-    
     min-height: 100%;
 }
 
@@ -128,4 +127,114 @@ p {
 
 .sticky-footer p {
     color: #ffffff;
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        height: 100%;
+    }
+    nav {
+        margin: 0;
+    }
+    nav a {
+        color: #FFF;
+        font-size: 15px;
+        line-height: 40px;
+        margin-left: 55px;
+    }
+    nav ul li {
+        display: block;
+        width: 400px;
+        border: 1px solid #000;
+    }
+    nav ul ul nav ul ul a {
+        padding: 0 40px;
+    }
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul {
+        display: none;
+    }
+    nav ul ul li {
+        display: block;
+    }
+    .comic > a:after,
+    .character > a:after {
+        content: " \25bc ";
+        display: none;
+    }
+    .sticky-footer {
+        position: absolute;
+        width: 100%;
+        background-color: #E64A19;
+        clear: both;
+        text-align: center;
+    }
+    .sticky-footer p {
+        color: #ffffff;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (device-width: 760px) {
+    nav {
+        width: 770px;
+        margin: 0 auto;
+    }
+    nav a {
+        display: block;
+        padding: 0 20px;
+        color: #FFF;
+        font-size: 12px;
+        line-height: 50px;
+        text-decoration: none;
+    }
+    nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+    }
+    nav ul li {
+        float: left;
+        position: relative;
+        display: inline-block;
+        background-color: #E64A19;
+    }
+    nav li {
+        transition: all ease 650ms;
+        font-family: Papyrus, fantasy;
+    }
+    nav li:hover {
+        background-color: #D16D59;
+        font-family: Papyrus, fantasy;
+    }
+    nav > ul:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+    nav ul ul {
+        display: none;
+        position: absolute;
+        top: 50px;
+    }
+    nav ul li:hover > ul {
+        display: inherit;
+        width: 100%;
+    }
+    nav ul li ul li ul li {
+        background-color: #D63C1D;
+        font-family: Papyrus, fantasy;
+    }
+    nav ul ul li {
+        width: 100%;
+        display: list-item;
+        position: relative;
+        background-color: #DD4318;
+    }
+    nav ul ul ul {
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
 }

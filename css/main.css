@@ -1,19 +1,20 @@
 body {
-    background-image: url(../images/comic.png);
+      background-image: url(../images/comic.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    min-height: 100%;
-    margin: 0px;
+    background-attachment: fixed;
     position: relative;
-    background-attachment:fixed;
+    
+    min-height: 100%;
 }
 
 html {
-    height: 100%
+    height: 100%;
 }
 
-
-/* Giving a background-color to the nav container. */
+main {
+    padding-bottom: 50px;
+}
 
 nav {
     width: 780px;
@@ -34,9 +35,6 @@ nav ul li {
     background-color: #E64A19;
 }
 
-
-/* Styling the links */
-
 nav a {
     display: block;
     padding: 0 20px;
@@ -45,9 +43,6 @@ nav a {
     line-height: 50px;
     text-decoration: none;
 }
-
-
-/*Shows the colour  when the cursor is pointed to the different navigation tabs*/
 
 nav li {
     transition: all ease 650ms;
@@ -81,18 +76,12 @@ nav ul li ul li ul li {
     font-family: Papyrus, fantasy;
 }
 
-
-/*Everything after content does not require arrows*/
-
 nav ul ul li {
     width: 100%;
     display: list-item;
     position: relative;
     background-color: #DD4318;
 }
-
-
-/*Green Arrow navigation to submenus*/
 
 nav ul ul ul {
     position: absolute;
@@ -124,15 +113,19 @@ nav ul ul ul {
 
 .sticky-footer {
     position: absolute;
-    width: 100%;
+    right: 0;
     bottom: 0;
-    text-align: center;
+    left: 0;
     background-color: #E64A19;
+    clear: both;
+    text-align: center;
 }
 
 p {
     font-family: Papyrus, fantasy;
-    color: #fff;
+    color: #000000;
 }
- 
- 
+
+.sticky-footer p {
+    color: #ffffff;
+}

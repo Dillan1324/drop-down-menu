@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Drop down menu</title>
@@ -13,12 +12,17 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <label for="drop" class="toggle">&#9776;</label>
+            <input type="checkbox" id="drop"></input>
+            <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li class="comic"><a href="#">DC Comics</a>
+                <li class="comic">
+                <!-- <a href="#">DC Comics</a> -->
                     <!-- First Drop Down -->
-                    <ul>
+                    <input type="checkbox" id="dc-dropdown">
+                    <label for="dc-dropdown">DC Comics</label>
+                    <ul class="comic">
                         <li class="character"><a href="#">Arrow</a>
                             <!-- Second  Drop Down -->
                             <ul>
@@ -33,8 +37,12 @@
                         <li><a href="#">Batman</a></li>
                     </ul>
                 </li>
-                <li class="comic"><a href="#">Marvel Comics</a>
-                    <ul>
+                <li class="comic">
+                <!-- <a href="#">Marvel Comics</a> -->
+                 <input type="checkbox" id="mc-dropdown">
+                    <label for="mc-dropdown">Marvel Comics</label>
+                    <ul class="comic">
+                
                         <li class="character"><a href="#">Iron Man</a>
                             <ul>
                                 <li><a href="#">Alter Ego</a></li>
@@ -47,8 +55,12 @@
                         <li><a href="#">Thor</a></li>
                     </ul>
                 </li>
-                <li class="comic"><a href="#">Dark Horse Comics</a>
-                    <ul>
+                <li class="comic">
+
+                <!-- <a href="#">Dark Horse Comics</a> -->
+                      <input type="checkbox" id="dh-dropdown">
+                    <label for="dh-dropdown">Dark Horse Comics</label>
+                    <ul class="comic">
                         <li class="character"><a href="#">Hellboy</a>
                             <ul>
                                 <li><a href="#">Alter Ego</a></li>

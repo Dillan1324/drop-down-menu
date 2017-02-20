@@ -37,9 +37,10 @@ label {
     padding: 0 20px;
     color: #FFF;
     font-size: 16px;
-    line-height: 43px;
+    line-height: 48px;
     text-decoration: none;
     cursor: pointer;
+     font-family: Papyrus, fantasy;
 }
 
 
@@ -121,8 +122,9 @@ nav ul ul {
     }
     
     .comic:hover > a,
-    v label:after {
-        transform: rotate(180deg);
+    label:after {
+        content: "\25bc";
+        transform: rotate(363deg);
         color: #070EF0;
         transition: 650ms ease all;
     }
@@ -150,7 +152,9 @@ nav ul ul ul {
 }
 .comic > a,
 label:after,
-.character > a:after {
+.character > a,
+label:after {
+    transform: rotate(363deg);
     content: "\25bc";
     display: inline-block;
     transition: 650ms ease all;
@@ -161,12 +165,15 @@ label:after {
     color: #070EF0;
     transition: 650ms ease all;
 }
-.character > a:after {
+.character > a,
+label:after {
+    transform: rotate(363deg);
     display: inline-block;
     transition: 650ms ease all;
 }
-.character:hover > a:after {
-    transform: rotate(270deg);
+.character:hover > a,
+label:after {
+    transform: rotate(363deg);
     color: #FFFF00;
 }
 .sticky-footer {
@@ -200,6 +207,18 @@ p {
 @media only screen and (max-width: 720px) {
     html {
         height: 100%;
+    }
+    
+    nav a,
+    label {
+        display: block;
+        padding: 0 20px;
+        color: #FFF;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: none;
+        cursor: pointer;
+        border: ridge firebrick;
     }
     
     nav a {
@@ -270,11 +289,13 @@ p {
         /*transform: skew(10deg);*/
     }
     
-    .comic > a,
-    label:after,
-    .character > a:after {
-        content: " \25bc ";
-        display: none;
+    .character:hover > a,
+    label:after {
+        content: "\271A ";
+        transform: rotate(359deg);
+        color: #000000;
+        display: flex;
+        padding-left: 184px;
     }
     
     .sticky-footer {

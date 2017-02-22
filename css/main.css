@@ -1,7 +1,12 @@
+/* -------------------------------- 
+ 
+Desktop View Starts Here
+ 
+-------------------------------- */
+
 body {
     background-image: url(../images/comic.png);
     background-repeat: no-repeat;
-    background-size: 100%;
     background-attachment: fixed;
     position: relative;
     min-height: 100%;
@@ -40,7 +45,7 @@ label {
     line-height: 48px;
     text-decoration: none;
     cursor: pointer;
-     font-family: Papyrus, fantasy;
+    font-family: Papyrus, fantasy;
 }
 
 
@@ -48,12 +53,13 @@ label {
 nav li {
     transition: all ease 650ms;
     font-family: Papyrus, fantasy;
+    background-color: #D16D59;
 }
 nav li:hover {
     background-color: #D16D59;
     font-family: Papyrus, fantasy;
 }
-nav > ul:after {
+nav>ul:after {
     display: block;
     content: '';
     clear: both;
@@ -62,82 +68,91 @@ nav ul ul {
     display: none;
     position: absolute;
 }
+nav ul li ul li ul li {
+    background-color: #C84E3E;
+}
+
+/* -------------------------------- 
+ 
+Desktop View Ends Here
+ 
+-------------------------------- */
+
+/* ------------------------------------------
+ 
+Media Query Of Max-Width 767px Starts Here
+ 
+------------------------------------------------*/
 @media (max-width: 767px) {
-    #dc-dropdown;
-    #mc-dropdown;
-    #dh-dropdown {
-        float: left;
-        background-color: red;
-        cursor: pointer;
-    }
-    
-    #dc-dropdown:checked ~ ul {
-        display: block;
-        position: relative;
-        background-color: blue
-    }
-    
-    #dc-dropdown:checked + label {
-        background-color: blue;
-    }
-    
-    #mc-dropdown:checked ~ ul {
+    #dc-dropdown:checked~ul {
         display: block;
         position: relative;
     }
     
-    #dh-dropdown:checked ~ ul {
+    #mc-dropdown:checked~ul {
         display: block;
         position: relative;
     }
     
-    #arrow-dropdown;
-    #ironman-dropdown;
-    #hellboy-dropdown {
-        float: left;
-        background-color: red;
+    #dh-dropdown:checked~ul {
+        display: block;
+        position: relative;
     }
     
-    #arrow-dropdown:checked ~ ul {
+    #arrow-dropdown:checked~ul {
         display: block;
         position: static;
     }
     
-    #ironman-dropdown:checked ~ ul {
+    #ironman-dropdown:checked~ul {
         display: block;
         position: static;
     }
     
-    #hellboy-dropdown:checked ~ ul {
+    #hellboy-dropdown:checked~ul {
         display: block;
         position: static;
     }
+}
+
+/* ------------------------------------------
+ 
+Media Query Of Max-Width 767px Ends Here
+ 
+------------------------------------------------*/
+
+/* ------------------------------------------
+ 
+Media Query Of Max-Width 768px Starts Here
+ 
+------------------------------------------------*/
+@media (min-width: 768px) {
+    nav ul li:hover>ul {
+        display: inherit;
+        width: 100%;
+    }
     
-    .comic > a,
-    label:after,
-    .character > a:after {
+    .comic>label:after,
+    .character>label:after {
         content: "\25bc";
+        display: inline-block;
+    }
+    
+    .comic:hover>label:after {
+        transform: rotate(180deg);
+        transition: 650ms ease all;
+        color: #070EF0;
+    }
+    
+    .character>label:after {
         display: inline-block;
         transition: 650ms ease all;
     }
     
-    .comic:hover > a,
-    label:after {
-        content: "\25bc";
-        transform: rotate(363deg);
-        color: #070EF0;
-        transition: 650ms ease all;
+    .character:hover>label:after {
+        transform: rotate(270deg);
+        color: #FFFF00;
     }
-}
-@media (min-width: 768px) {
-    nav ul li:hover > ul {
-        display: inherit;
-        width: 100%;
-    }
-}
-nav ul li ul li ul li {
-    background-color: #D63C1D;
-    font-family: Papyrus, fantasy;
 }
 nav ul ul li {
     width: 100%;
@@ -149,32 +164,6 @@ nav ul ul ul {
     position: absolute;
     top: 0;
     left: 100%;
-}
-.comic > a,
-label:after,
-.character > a,
-label:after {
-    transform: rotate(363deg);
-    content: "\25bc";
-    display: inline-block;
-    transition: 650ms ease all;
-}
-.comic:hover > a,
-label:after {
-    transform: rotate(180deg);
-    color: #070EF0;
-    transition: 650ms ease all;
-}
-.character > a,
-label:after {
-    transform: rotate(363deg);
-    display: inline-block;
-    transition: 650ms ease all;
-}
-.character:hover > a,
-label:after {
-    transform: rotate(363deg);
-    color: #FFFF00;
 }
 .sticky-footer {
     position: absolute;
@@ -192,6 +181,18 @@ p {
 .sticky-footer p {
     color: #ffffff;
 }
+
+/* ------------------------------------------
+ 
+Media Query Of Max-Width 767px Ends Here
+ 
+------------------------------------------------*/
+
+/* ------------------------------------------
+ 
+Media Query Of Max-Width 786px Starts Here
+ 
+------------------------------------------------*/
 @media (min-width: 786px) {
     nav {
         width: 786px;
@@ -204,104 +205,123 @@ p {
         background-color: #E64A19;
     }
 }
+
+/* ------------------------------------------
+ 
+Media Query Of Max-Width 786px Ends Here
+ 
+------------------------------------------------*/
+
+/* ------------------------------------------
+ 
+           Mobile first starts here
+ 
+------------------------------------------------*/
 @media only screen and (max-width: 720px) {
     html {
         height: 100%;
     }
     
-    nav a,
-    label {
+    nav label {
         display: block;
         padding: 0 20px;
         color: #FFF;
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 12px;
+        line-height: 62px;
         text-decoration: none;
         cursor: pointer;
-        border: ridge firebrick;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    nav label:hover {
+        color: #6FCDC8;
+        border-left: 3px solid #4ecec4;
+        padding-left: 17px;
     }
     
     nav a {
-        color: #FFF;
-        font-size: 15px;
-        line-height: 50px;
+        font-size: 12px;
+        line-height: 64px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    nav a:hover {
+        color: #6FCDC8;
+        border-left: 3px solid #4ecec4;
+        padding-left: 17px;
+    }
+    
+    nav li:hover {
+        background-color: #495369;
+        color: white;
     }
     
     .toggle {
-        color: #000000;
+        color: #ffffff;
         font-weight: bold;
-        background: #E82922;
-        border-bottom: 1px solid #000;
+        background: #6FCDC8;
         text-align: center;
         display: none;
+        display: block;
+        height: 58px;
+    }
+    
+    .toggle+a,
+    .menu {
+        display: none;
+    }
+    
+    .toggle:hover {
+        color: white;
+    }
+    
+    [id^=drop]:checked+ul {
+        display: block;
+        background-color: #3e475a;
     }
     
     input[id=drop] {
         display: none;
     }
     
-    .toggle + a,
-    .menu {
-        display: none;
-    }
-    
-    .toggle {
-        display: block;
-    }
-    
-    .toggle:hover {}
-    
-    [id^=drop]:checked + ul {
-        display: block;
-        background-color: #D6242A;
-    }
-    
     nav ul li {
         display: block;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #454f64;
+        color: white;
     }
-    
-    nav ul li,
-    nav ul li a {}
     
     nav ul ul nav ul ul a {
         padding: 0 40px;
-    }
-    
-    nav ul ul li:hover > ul,
-    nav ul li:hover > ul {
-        display: none;
+        color: white;
     }
     
     nav ul ul li {
         display: block;
-        background-color: blue;
-        /*transform: skew(10deg);*/
-    }
-    
-    nav ul ul li:last-child {
-        border-bottom: none;
+        background-color: #2e3542;
+        color: white;
     }
     
     nav ul li ul li ul li {
-        background-color: #CC162E;
-        font-family: Papyrus, fantasy;
-        /*transform: skew(10deg);*/
+        background-color: #1e212a;
     }
     
-    .character:hover > a,
-    label:after {
-        content: "\271A ";
-        transform: rotate(359deg);
-        color: #000000;
-        display: flex;
-        padding-left: 184px;
+    .comic>label:after,
+    .character>label:after {
+        content: "\271A";
+        display: inline-block;
+        float: right;
     }
     
     .sticky-footer {
         position: absolute;
         width: 100%;
-        background-color: #E64A19;
+        background-color: #BB4C39;
         clear: both;
         text-align: center;
     }
@@ -311,3 +331,10 @@ p {
         font-size: 13px;
     }
 }
+
+/* ------------------------------------------
+ 
+Mobile Ends Here
+ 
+------------------------------------------------*
+/

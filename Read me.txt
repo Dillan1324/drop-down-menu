@@ -1,53 +1,25 @@
 ## Synopsis
-This project consists of a drop down menu. It has five navigation tabs. Two of the navigation tabs consist of drop down menus.
-The drop down menu is coded in HTML and styled using CSS.
-
-
-## Code Example:
-The html code that was used, consist of ul and li.
-This is and example code in html that is used for the navigation and drop down menus are:
- <nav>
-        <div class="add class name here">
-            <ul>
-                <li>Add title of navigation page here</li>
-                <li>Add title of navigation page here</li>
-                <li>
-                    Add title of frist drop down navigation page here(This is where the drop down menu starts)
-                    <ul>
-                        <li>Add sub title of navigation page </li>
-                        <li>Add sub title of navigation page</li>
-                        <li>Add sub title of navigation page</li>
-                        <li>Add sub title of navigation page</li>
-                    </ul>
-              </div>
-</nav>
-
-
+This project consists of a drop down menu.
 
 
 ## Installation
 In order to dowload the project folder follow these steps:
 
-step 1:Input github url or the url that links to drop down menu project. Once entered, you will arrive at the project folder. On the right hand side
-a green button labled "Cloe/download". Click that.
 
-Step 2: Press enter or click download for download zip directly or click search for view the list of sub-folders and files.
+Step 1: Click "Download Zip File" or "Get File" button to get files.
 
-Step3: Click "Download Zip File" or "Get File" button to get files.
 
-Step 4: Once the files have downloaded, go to your dowloaded folder or whichever folder you saved the project in.
-
-Step 5: DO NOT OPEN THE FOLDER AND TRUN THE PROJECT IMMEDIEATLY. as this will show a broken website. Frist exract all files. 
+Step 2: DO NOT OPEN THE FOLDER AND TRUN THE PROJECT IMMEDIEATLY. as this will show a broken website. Frist exract all files. 
 Once all files are extracted, than you can run the index.html file or browse all files.
 
+Step 3: Set up your web server and move extracted file into your web server.
+
+Step 4: Run website
 
 
 
 
 ## Tests
-To run the project, after extracting the files, simply:
-
--Press and click the index.html folder to run the webpage or to preview the website.
 
 -To view the source codes, simply open ypur coding platform (Sublime text, notpad++, atom, etc) and drag the folder into that platform.
 

@@ -1,3 +1,121 @@
+/* ------------------------------------------
+ 
+           Mobile first starts here
+ 
+------------------------------------------------*/
+
+nav label {
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav label,
+nav a {
+    color: #FFF;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav label:hover,
+nav a:hover {
+    color: #6FCDC8;
+    border-left: 3px solid #6FCDC8;
+    padding-left: 17px;
+}
+
+nav li:hover {
+    background-color: #495369;
+    color: white;
+}
+
+.toggle {
+    color: #ffffff;
+    font-weight: bold;
+    background: #6FCDC8;
+    text-align: center;
+    display: none;
+    display: block;
+    height: 58px;
+}
+
+.toggle+a {
+    display: none;
+}
+
+.toggle:hover {
+    color: #ffffff;
+}
+
+[id^="drop"]+ul {
+    display: none;
+}
+
+[id^="drop"]:checked+ul {
+    display: block;
+    background-color: #3e475a;
+}
+
+input[id=drop] {
+    display: none;
+}
+
+nav ul li {
+    display: block;
+    border-bottom: 1px solid #454f64;
+    color: white;
+}
+
+nav ul ul li {
+    display: block;
+    background-color: #2e3542;
+    color: white;
+}
+
+nav ul li ul li ul li {
+    background-color: #1e212a;
+}
+
+.comic>label:after,
+.character>label:after {
+    content: "\271A";
+    display: inline-block;
+    float: right;
+}
+
+.sticky-footer {
+    position: absolute;
+    width: 100%;
+    background-color: #BB4C39;
+    clear: both;
+    text-align: center;
+}
+
+.sticky-footer p {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+
+/* ------------------------------------------
+ 
+Mobile Ends Here
+ 
+------------------------------------------------*
+/
+
+
+
+
+
+
+
+
+
 /* -------------------------------- 
  
 Desktop View Starts Here
@@ -20,8 +138,10 @@ main {
     padding-bottom: 50px;
 }
 
-.toggle,
-[id*=drop] {
+
+/*.toggle,*/
+
+[id*="drop"] {
     display: none;
 }
 
@@ -41,23 +161,29 @@ label {
     display: block;
     padding: 0 20px;
     color: #FFF;
-    font-size: 16px;
     line-height: 48px;
     text-decoration: none;
     cursor: pointer;
-    font-family: Papyrus, fantasy;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav label:hover,
+nav a:hover {
+    color: #6FCDC8;
+    border-left: 3px solid #6FCDC8;
+    padding-left: 17px;
 }
 
 
 }
 nav li {
     transition: all ease 650ms;
-    font-family: Papyrus, fantasy;
-    background-color: #D16D59;
 }
+nav li,
 nav li:hover {
-    background-color: #D16D59;
-    font-family: Papyrus, fantasy;
+    background-color: #3e475a;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 800ms ease;
 }
 nav>ul:after {
     display: block;
@@ -67,9 +193,13 @@ nav>ul:after {
 nav ul ul {
     display: none;
     position: absolute;
+    background-color: #2e3542;
 }
 nav ul li ul li ul li {
-    background-color: #C84E3E;
+    background-color: #1e212a;
+}
+nav ul li ul li ul li:last-child {
+    border-bottom: none;
 }
 
 /* -------------------------------- 
@@ -115,7 +245,7 @@ Media Query Of Max-Width 767px Starts Here
     }
 }
 
-/* ------------------------------------------
+/* -------------------------------------------
  
 Media Query Of Max-Width 767px Ends Here
  
@@ -127,6 +257,35 @@ Media Query Of Max-Width 768px Starts Here
  
 ------------------------------------------------*/
 @media (min-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+    
+    [id^="drop"]+ul {
+        display: block;
+    }
+    
+    .toggle,
+    [id*=drop] {
+        display: none;
+    }
+    
+    nav label {
+        padding: 0 10px;
+    }
+    
+    nav a,
+    label {
+        padding: 0 10px;
+    }
+    
+    nav label:hover,
+    nav a:hover {
+        border: 0;
+        padding-left: 10px;
+    }
+    
     nav ul li:hover>ul {
         display: inherit;
         width: 100%;
@@ -136,29 +295,26 @@ Media Query Of Max-Width 768px Starts Here
     .character>label:after {
         content: "\25bc";
         display: inline-block;
+        transition: 850ms ease all;
+        float: none;
     }
     
     .comic:hover>label:after {
         transform: rotate(180deg);
-        transition: 650ms ease all;
-        color: #070EF0;
-    }
-    
-    .character>label:after {
+        transition: 850ms ease all;
         display: inline-block;
-        transition: 650ms ease all;
     }
     
     .character:hover>label:after {
         transform: rotate(270deg);
-        color: #FFFF00;
+        transition: 850ms ease all;
+        display: inline-block;
     }
 }
 nav ul ul li {
     width: 100%;
-    display: list-item;
     position: relative;
-    background-color: #DD4318;
+    background-color: #495369;
 }
 nav ul ul ul {
     position: absolute;
@@ -170,12 +326,13 @@ nav ul ul ul {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #E64A19;
+    background-color: #3D3745;
     clear: both;
     text-align: center;
 }
 p {
-    font-family: Papyrus, fantasy;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     color: #000000;
 }
 .sticky-footer p {
@@ -193,148 +350,24 @@ Media Query Of Max-Width 767px Ends Here
 Media Query Of Max-Width 786px Starts Here
  
 ------------------------------------------------*/
-@media (min-width: 786px) {
+@media (min-width: 768px) {
     nav {
-        width: 786px;
+        width: 768px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     nav ul li {
         float: left;
         position: relative;
         display: inline-block;
-        background-color: #E64A19;
+        background-color: #495369;
     }
 }
 
-/* ------------------------------------------
+/* ---------------------------------------------
  
 Media Query Of Max-Width 786px Ends Here
  
 ------------------------------------------------*/
-
-/* ------------------------------------------
- 
-           Mobile first starts here
- 
-------------------------------------------------*/
-@media only screen and (max-width: 720px) {
-    html {
-        height: 100%;
-    }
-    
-    nav label {
-        display: block;
-        padding: 0 20px;
-        color: #FFF;
-        font-size: 12px;
-        line-height: 62px;
-        text-decoration: none;
-        cursor: pointer;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-    
-    nav label:hover {
-        color: #6FCDC8;
-        border-left: 3px solid #4ecec4;
-        padding-left: 17px;
-    }
-    
-    nav a {
-        font-size: 12px;
-        line-height: 64px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-    
-    nav a:hover {
-        color: #6FCDC8;
-        border-left: 3px solid #4ecec4;
-        padding-left: 17px;
-    }
-    
-    nav li:hover {
-        background-color: #495369;
-        color: white;
-    }
-    
-    .toggle {
-        color: #ffffff;
-        font-weight: bold;
-        background: #6FCDC8;
-        text-align: center;
-        display: none;
-        display: block;
-        height: 58px;
-    }
-    
-    .toggle+a,
-    .menu {
-        display: none;
-    }
-    
-    .toggle:hover {
-        color: white;
-    }
-    
-    [id^=drop]:checked+ul {
-        display: block;
-        background-color: #3e475a;
-    }
-    
-    input[id=drop] {
-        display: none;
-    }
-    
-    nav ul li {
-        display: block;
-        border-bottom: 1px solid #454f64;
-        color: white;
-    }
-    
-    nav ul ul nav ul ul a {
-        padding: 0 40px;
-        color: white;
-    }
-    
-    nav ul ul li {
-        display: block;
-        background-color: #2e3542;
-        color: white;
-    }
-    
-    nav ul li ul li ul li {
-        background-color: #1e212a;
-    }
-    
-    .comic>label:after,
-    .character>label:after {
-        content: "\271A";
-        display: inline-block;
-        float: right;
-    }
-    
-    .sticky-footer {
-        position: absolute;
-        width: 100%;
-        background-color: #BB4C39;
-        clear: both;
-        text-align: center;
-    }
-    
-    .sticky-footer p {
-        color: #ffffff;
-        font-size: 13px;
-    }
-}
-
-/* ------------------------------------------
- 
-Mobile Ends Here
- 
-------------------------------------------------*
-/
